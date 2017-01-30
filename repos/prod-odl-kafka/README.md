@@ -40,7 +40,7 @@ cp -n ~/.m2/settings.xml{,.orig} ; \
 wget -q -O - https://raw.githubusercontent.com/opendaylight/odlparent/master/settings.xml > ~/.m2/settings.xml
 ```
 
-If this plugin is supposed to be [deployed on a pre-existed ODL container](#deploy-to-pre-existed-odl-container-optional), you will also need to replace the '<version>' value with the release version of your target ODL container. [NOTE: at the moment only Lithium releases have been tested and supported] 
+If this plugin is supposed to be [deployed on a pre-existing ODL container](#deploy-to-pre-existing-odl-container-optional), you will also need to replace the '<version>' value with the release version of your target ODL container. [NOTE: at the moment only Lithium releases have been tested and supported]
 
 This can be done by editing the `<parent>` section of the `prod-odl-kafka/kafka-agent/impl/pom.xml` file. Below is an example that builds for `Lithium-SR3` release. 
 
@@ -91,9 +91,9 @@ odl-kafka-agent-ui                | 2.0.1-Lithium     | x         | odl-kafka-ag
 opendaylight-user@root>
 ```
 
-### Deploy to pre-existed ODL container (optional)
+### Deploy to pre-existing ODL container (optional)
 
-If you have an existed ODL container, simply copy the `.kar` file to the `deploy` directory. See example below.
+If you have an existing ODL container, simply copy the `.kar` file to the `deploy` directory. See example below.
 
 ```
 sudo cp kafka-agent/features/target/kafka-agent-features-1.0.0-Lithium.kar /opt/distribution-karaf-0.3.3-Lithium-SR3/deploy/
